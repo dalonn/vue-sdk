@@ -6,13 +6,8 @@ import App from './App.vue'
 import ElementPlus from 'element-plus';
 import 'element-plus/lib/theme-chalk/index.css';
 
-// // ROUTER 설정
-// import {createWebHistory, createRouter} from "vue-router";
 
-// // components의 필요한 vue 가져오기
-// import Main from '@components/Main/vue';
-
-import router from './routes'; // 추가
+import router from './routes'; //추가
 
 const app = createApp(App);
 app.use(router);

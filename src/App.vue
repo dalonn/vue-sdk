@@ -3,10 +3,12 @@
   <el-container>
     <el-header>
       <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-        <el-menu-item index="1"><router-link to="/">Main</router-link></el-menu-item>
-        <el-menu-item index="2"><router-link to="/about">about</router-link></el-menu-item>
-        <el-menu-item index="3"><router-link to="/iteminsert">iteminsert</router-link></el-menu-item>
-        <el-menu-item index="4"><router-link to="/itemselect">itemselect</router-link></el-menu-item>
+        <el-menu-item index="1">메인</el-menu-item>
+        <el-menu-item index="2">테스트</el-menu-item>
+        <el-menu-item index="3">물품등록</el-menu-item>
+        <el-menu-item index="4">물품조회</el-menu-item>
+        <el-menu-item index="5">주문하기</el-menu-item>
+        <el-menu-item index="6">주문내역</el-menu-item>
       </el-menu>
     </el-header>
     <el-container>
@@ -18,9 +20,39 @@
 </template>
 
 <script>
-
+ export default {
+    data() {
+      return {
+      };
+    },
+    methods: {
+      handleSelect(key, keyPath) {
+        if(key === '1') {
+          this.$router.push({path:'/'});
+        }
+        if(key === '2') {
+          this.$router.push({path:'/about'});
+        }
+        if(key === '3') {
+          this.$router.push({path:'/iteminsert'});
+        }
+        if(key === '4') {
+          this.$router.push({path:'/itemselect'});
+        }
+        if(key === '5') {
+          this.$router.push({path:'/orderinsert'});
+        }
+        if(key === '6') {
+          this.$router.push({path:'/orderlist'});
+        }
+        console.log(key, keyPath);
+      }
+    }
+  }
 </script>
 
 <style>
 
 </style>
+
+    
